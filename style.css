@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+main{
+    height: 100%;
+}
+
+nav{
+    background-color: black;
+    width: 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: flex-start;
+    height: calc(100% - 50px);
+    float: left;
+
+}
+#part-right{
+    height: calc(100vh - 50px);
+    width: calc(100vw - 40px);
+    float: right;
+    background-color: rgb(32, 32, 32);
+    
+
+}
+#bar-top{
+    width: calc(100vw - 40px);
+    height: 50px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+}
+
+#button-top{
+    text-decoration: none;
+}
+
+#button-top button{
+    color: white;
+    background-color: transparent;
+    border:1px solid white;
+    border-radius: 20px;
+    padding: 5px 20px;
+    margin: 10px 10px;
+    
+}
+
+#button-top button,
+.container-main a{
+    text-transform: uppercase;
+
+}
+.container-main{
+    background-color: rgb(35, 35, 37);
+    height: 100%;
+    width: 100%;
+    margin-top: 50px;
+}
+
+nav .icon-bright{
+    opacity: 0.6;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+
+}
+
+#nav-top{
+    width: 30px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+#nav-bottom{
+    width: 30px;
+    height: 200px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#download-nav{
+    margin: 10px 0;
+    height: 12px;
+}
+
+#profile-img{
+    background-color: gray;
+    
+    border-radius: 50%;
+}
+
+.container-main ul{
+    margin: 50px auto;
+    text-align: center;
+}
+
+.container-main li{
+    list-style: none;
+    padding: 20px 10px;
+    display: inline-block;
+         
+}
+
+.container-main li a{
+    color: gray;
+    text-decoration: none;
+    line-height: 30px;
+   
+}
+
+#in-evidenza{
+    bor
+}
+
+
+footer{
+    color: white;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(17, 16, 16);
+}
+
+
+
+
+
+
