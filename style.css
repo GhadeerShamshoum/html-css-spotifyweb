@@ -1,8 +1,6 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+</style>
+
 
 ::-webkit-scrollbar{
     width: 10px;
@@ -19,85 +17,58 @@
     background: #555;
 }
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    
-    
-}
 
 @media screen and (min-width: 576px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body{
+        font-family: 'Montserrat', sans-serif;
+        
+        
+    }
+    #wrapper{
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+    }
 
     main{
+        height: calc(100% - 90px);
+        overflow: hidden;
+    }
+    #wrapper::after{
         content: '';
         display: table;
         clear: both;
     }
     
     nav{
+        float: left;   
         background-color: black;
         width: 40px;
         color: white;
         display: flex;
-        position: fixed;
-        top:0;
         flex-direction: column;
-        justify-content: space-between;
         align-items: center;
-        height: calc(100% - 50px);
-        float: left;
-    
+        height: calc(100%);
+        min-height: 490px;
     }
 
-    nav #part-right,
-    nav #part-left{
+    .normal-logo{
+        display: none ;
+    }
+    
+    nav #part-top,
+    nav #part-bottom{
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
         align-items: center;
     }
-
-     
-    #part-right{
-        height: 100%;
-        width: calc(100% - 40px);
-        float: right;
-        background-color: rgb(32, 32, 32);
-        overflow: scroll;
-        
-    
-    }
-    #bar-top{
-        width: calc(100% - 40px);
-        height: 50px;
-        position: fixed;
-        top:0;
-        right: 0;
-        text-align: right;
-        color:white;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 99;
-    }
-    
-    #button-top{
-        text-decoration: none;
-    }
-    
-    #button-top button{
-        color: white;
-        background-color: transparent;
-        border:1px solid white;
-        border-radius: 20px;
-        padding: 5px 20px;
-        margin: 10px 10px;
-        
-    }
-    
-    #button-top button,
-    .container-main a{
-        text-transform: uppercase;
-    
-    }
-    
+ 
     nav .icon-bright{
         opacity: 0.6;
     }
@@ -106,16 +77,16 @@ body{
     
     #nav-top{
         width: 30px;
-        height: 200px;
+        height: calc(100% - 80px);
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        
         
     }
     
     #nav-bottom{
         width: 30px;
-        height: 200px;
+        height: 80px;
         margin-bottom: 5px;
         display: flex;
         flex-direction: column;
@@ -129,16 +100,65 @@ body{
     
     #profile-img{
         background-color: gray;
-        
+        height: 27px;
+        width: 27px;
         border-radius: 50%;
+        overflow: hidden;
+    }
+    #part-right{
+        height: 100%;
+        width: calc(100% - 40px);
+        background-color: rgb(32, 32, 32);
+        overflow-y:auto;
+        overflow-x: hidden;
+        float: left;
+        
+        
+    }
+    #bar-top{
+        width: calc(100% - 40px);
+        height: 70px;
+        position: fixed;
+        top:0;
+        right: 0;
+        text-align: right;
+        color:white;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 99;
     }
     
-   
+    #button-top{
+        text-decoration: none;
+        vertical-align: middle;
+        line-height: 70px;
+    }
+    #button-top button:hover{
+        padding:9px 24px ;
+    }
+    
+    #button-top button{
+        color: white;
+        background-color: transparent;
+        border:1px solid white;
+        border-radius: 20px;
+        padding: 10px 22px;
+        margin: 10px 10px;
+        
+    }
+    
+    #button-top button,
+    .container-main a{
+        text-transform: uppercase;
+        
+    }
+    
+    
+    
     .container-main{
         
         height: 100%;
         width: 100%;
-        margin: 50px auto;
+        margin: 70px auto;
     }
     
     .container-main ul{
@@ -178,6 +198,7 @@ body{
     #list-music{
         margin: 0 20px;
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
     }
     
@@ -229,7 +250,7 @@ body{
     footer{
         color: white;
         width: 100%;
-        height: 50px;
+        height: 90px;
         position: fixed;
         bottom: 0;
         left: 0;
