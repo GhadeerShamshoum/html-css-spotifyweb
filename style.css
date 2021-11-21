@@ -359,8 +359,16 @@ nav h2{
     list-style: none;
     padding: 10px 10px;
     display: inline-block;
+    transition: all .5s linear;
+    
          
 }
+@media screen and (min-width: 768px){
+    .container-main li:hover{
+        transform: scale(1.2);
+    }
+}
+
 
 .container-main li a{
     font-size: 14px;
@@ -400,14 +408,7 @@ li #in-evidenza::after {
     }
 }
 
-@media screen and (min-width: 992px){
-    .list-music{
-        flex-wrap: nowrap;
-    }
-    .container-items{
-        max-width: 208px;
-    }
-}
+
 
 h1{
     color: white;
@@ -440,7 +441,6 @@ h1{
 }
 .container-items:hover img {
     opacity: 0.5;
-    
 }
 
 .container-photo {
@@ -458,7 +458,26 @@ h1{
 }
 .container-items:hover .container-photo i{
     visibility: visible;
+    
 }
+
+@media screen and (min-width: 992px){
+    .list-music{
+        flex-wrap: nowrap;
+    }
+    .container-items{
+        max-width: 208px;
+    }
+
+    .container-items:hover{
+       
+        padding: 15px;
+        
+    
+    
+    }
+}
+
 
 .photo-in-circle{
     border-radius: 50%;
@@ -610,16 +629,19 @@ footer #player{
     font-size: 15px;
     color: white;
     opacity: 0.7;
+    transition: all .5s linear;
 }
 #player-buttons .fa-solid:hover{
     opacity: 1;
+    transform: scale(2);
 }
 
 #special-button{
     font-size: 26px; 
+    transition: all .5s linear;
 }
 #special-button:hover{
-    font-size: 32px;
+    transform: scale(2);
 }
 .time-min, .time-max{
     width: 10%;
@@ -665,7 +687,6 @@ footer #player{
 }
 
 
-
 #footer-right ul{
     display: flex;
     
@@ -693,14 +714,20 @@ footer #player{
 
 
 
+.volume-bar:active .genbar-right {
+    width: 60%;
+}
+
+.volume-bar:active .time-point-right{
+    right: 40%;
+}
 
 
 
-@media screen and (min-width: 576px){
-    
-    
-    
-    
 
-}    
+
+
+
+
+   
 
