@@ -14,7 +14,7 @@
 
 ::-webkit-scrollbar-thumb{
     border-radius: 5px;
-    height: 400px;
+    height: 5%;
     background-color: rgba(128, 128, 128, 0.514);
 
 }
@@ -102,11 +102,17 @@ nav #part-bottom{
     flex-direction: column;   
 }
 
+@media screen and (max-height: 690px){
+    #nav-top #playlist-nav{
+        overflow-y:scroll;
+    }
+}
+
 #nav-top li{
     line-height: 2;
 }
 
-.nav-list, #playlist-nav{
+.nav-list, #playlist-title, #add-playlist, #playlist-nav{
     display: none;
     text-decoration: none;
    
@@ -125,6 +131,12 @@ nav #part-bottom{
         padding-left:20px;
         
     }
+    #playlist-title{
+        margin: 15px 0 10px 0;
+        font-size: 13px;
+        padding-left: 20px;
+    }
+
 
     .mobile-logo{
         display: none;
@@ -159,12 +171,16 @@ nav #part-bottom{
         font-size: 12px;
         margin: 10px 0 5px 0;
     }
+    #add-playlist{
+        padding-left: 20px;
+        font-size: 10px;
+    }
     #add-playlist i{
         color: black;
         font-size: 17px;
         padding: 6px;
         background-color: white;
-        margin: 10px 0 15px 0;
+        margin: 10px 5px 15px 0;
     }
 
     #playlist-nav li{
@@ -174,7 +190,8 @@ nav #part-bottom{
     }
    
 
-}    
+} 
+
 
 #nav-bottom{
     width: 30px;
@@ -268,10 +285,6 @@ nav a{
     }
 
 
-
-
-
-
 }
 #bar-top{
     width: calc(100% - 40px);
@@ -295,6 +308,9 @@ nav a{
     text-decoration: none;
     vertical-align: middle;
     line-height: 70px;
+}
+#button-top button{
+    transition: all .5s ease-in;
 }
 #button-top button:hover{
     padding:13px 38px ;
@@ -361,9 +377,24 @@ li #in-evidenza::after {
 }
 
 .list-music{
-    padding: 0 20px;
+    margin: 0 20px;
     display: flex;
     flex-wrap: wrap;
+}
+
+@media screen and (min-width: 768px){
+    .list-music .container-items {
+        width: calc(100% / 4);
+    }
+}
+
+@media screen and (min-width: 992px){
+    .list-music{
+        flex-wrap: nowrap;
+    }
+    .container-items{
+        max-width: 208px;
+    }
 }
 
 h1{
@@ -394,6 +425,7 @@ h1{
 
 .container-photo {
     position: relative;
+    width: 100%;
 }
 .container-items .container-photo i{
     font-size: 50px;
@@ -422,14 +454,21 @@ h1{
 .text-under-photo{
     width: 100%;
     height: 100%;
-    padding: 10px;
+    padding: 10px 0;
 }
 
 .text-under-photo h3{
     color: white;
     font-size: 15px;
-    text-align: justify;
     text-align-last: center;
+}
+
+@media screen and (min-width: 768px){
+    .text-under-photo h3{
+        font-size: 10px;
+
+    }
+
 }
 
 .text-under-photo h6{
@@ -474,8 +513,14 @@ footer #player{
 
 #photo-container-footer{
     width: 30%;
+}
+@media screen and (min-width: 576px){
+    #photo-container-footer{
+        width: 48px;
+    }
 
 }
+
 
 #name-song{
     height: 41px;
@@ -506,6 +551,17 @@ footer #player{
     display: flex;
     flex-direction: column;
     margin-top: -14px;
+}
+@media screen and (min-width: 576px){
+    #icons-left-footer{
+        width: 20px;
+        flex-direction: row;
+        
+    }
+    #icons-left-footer i{
+        margin: 0 5px;
+    }
+
 }
 #icons-left-footer i{
     font-size: 10px;
