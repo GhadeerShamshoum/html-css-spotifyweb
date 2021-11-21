@@ -102,7 +102,12 @@ nav #part-bottom{
     flex-direction: column;   
 }
 
-@media screen and (max-height: 690px){
+@media screen and (max-height: 300px){
+    #bar-top{
+        display: none;
+    }
+}
+@media screen and (max-height: 650px){
     #nav-top #playlist-nav{
         overflow-y:scroll;
     }
@@ -135,6 +140,9 @@ nav #part-bottom{
         margin: 15px 0 10px 0;
         font-size: 13px;
         padding-left: 20px;
+    }
+    #playlist-title, #add-playlist{
+        display: block;
     }
 
 
@@ -308,6 +316,7 @@ nav a{
     text-decoration: none;
     vertical-align: middle;
     line-height: 70px;
+    margin-right: 12px;
 }
 #button-top button{
     transition: all .5s ease-in;
@@ -382,6 +391,9 @@ li #in-evidenza::after {
     flex-wrap: wrap;
 }
 
+
+
+
 @media screen and (min-width: 768px){
     .list-music .container-items {
         width: calc(100% / 4);
@@ -404,12 +416,20 @@ h1{
     font-weight: 900;
 }
 
+.row{
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
 .container-items{
     padding-right: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 50%;    
+    width: 49%;
+    height: 100%;    
 }
 
 .container-items img{
