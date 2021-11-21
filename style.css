@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+/* scrollbar */
+
 ::-webkit-scrollbar{
-    width: 10px;
+    width: 15px;
 }
 
 ::-webkit-scrollbar-track{
-    background-color: #f1f1f1;
-}
-::-webkit-scrollbar-thumb{
-    background: #888;
+    
+    background-color: white;
+    padding: 5px;
 }
 
-::-webkit-scrollbar-thumb:hover{
-    background: #555;
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    height: 400px;
+    background-color: rgba(128, 128, 128, 0.514);
+
 }
 
 
@@ -27,6 +32,7 @@ body{
 
 a{
     color: white;
+    text-decoration: none;
     
 }
 li{
@@ -43,15 +49,20 @@ a:hover{
     background-color: black;
 }
 
+/* main */
+
 main{
     height: calc(100% - 90px);
     overflow: hidden;
+    scrollbar-face-color: white;
 }
 main::after{
     content: '';
     display: table;
     clear: both;
 }
+
+/* nav */
 
 nav{
     float: left;   
@@ -68,6 +79,11 @@ nav{
 .normal-logo{
     display: none ;
 }
+.normal-logo #big-logo{
+    width: 120px;
+    padding: 10px 0 15px 0;
+    
+}
 
 nav #part-top,
 nav #part-bottom{
@@ -83,27 +99,80 @@ nav #part-bottom{
     padding-top: 5px;
     height: calc(100% - 80px);
     display: flex;
-    flex-direction: column;
-    
-    
-    
+    flex-direction: column;   
 }
+
+#nav-top li{
+    line-height: 2;
+}
+
 .nav-list, #playlist-nav{
     display: none;
+    text-decoration: none;
+   
 }
 
 @media screen and (min-width: 576px){
     nav{
         width: 200px;
     }
+    #nav-top{
+        width: 100%;
+    }
+    
+    #nav-top li, 
+    #playlist-nav{
+        padding-left:20px;
+        
+    }
 
+    .mobile-logo{
+        display: none;
+    }
+    
+    .normal-logo{
+        display: block;
+    }
+    
     .nav-list{
         display: inline;
+        font-size: 12px;
     }  
-    nav #part-top,
-    nav #part-bottom{
-        align-items: flex-start;
+   
+    
+    #nav-top img{
+        width: 20px;
+        
     }
+    #home-desktop{
+        border-left: 3px solid chartreuse;
+    }
+
+    #nav-top img{
+        vertical-align: middle;
+    }
+    #home-desktop a{
+        opacity: 1;
+    }
+    #playlist-nav{
+        display: block;
+        font-size: 12px;
+        margin: 10px 0 5px 0;
+    }
+    #add-playlist i{
+        color: black;
+        font-size: 17px;
+        padding: 6px;
+        background-color: white;
+        margin: 10px 0 15px 0;
+    }
+
+    #playlist-nav li{
+        padding: 0;
+        margin-bottom: 10px;
+        opacity: .7;
+    }
+   
 
 }    
 
@@ -114,6 +183,11 @@ nav #part-bottom{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+}
+
+#nav-bottom a{
+    display: flex;
+    flex-direction: column;
 }
 
 nav a{
@@ -136,7 +210,11 @@ nav a{
     height: 27px;
     width: 27px;
     border-radius: 50%;
+    margin: auto;
     overflow: hidden;
+}
+#nav-bottom li span{
+    display: none;
 }
 #part-right{
     height: 100%;
@@ -148,12 +226,52 @@ nav a{
     
     
 }
-@media  screen and (min-width:576px) {
-    #part-right{
-        width: calc(100% - 200px);
-
+@media  screen and (min-width:576px){
+    #nav-bottom{
+        width: 100%;
+        padding:0 20px;
+        align-content: flex-start;
     }
-    
+
+    #nav-bottom a{
+        align-items: flex-start;
+    }
+
+    #nav-bottom #profile-img{
+        margin: 0;
+    }
+    #nav-bottom li a{
+        display: inline-block;
+    }
+    #nav-bottom #download-nav{
+        vertical-align: middle;
+    }
+    #nav-bottom li{
+        display: flex;
+        align-items: center;
+    }
+    #nav-bottom li span{
+        display: block;
+        font-size: 10px;
+        padding-left: 10px;
+    }
+    #nav-bottom li:first-child{
+        border-bottom: 1px solid gray;
+    }
+    #nav-bottom li:last-child{
+        margin-top: 10px;
+    }
+    #nav-bottom li:last-child a{
+        opacity: 1;
+        font-size: 12px;
+        
+    }
+
+
+
+
+
+
 }
 #bar-top{
     width: calc(100% - 40px);
@@ -167,6 +285,12 @@ nav a{
     z-index: 99;
 }
 
+@media  screen and (min-width:576px) {
+    #part-right, #bar-top{
+        width: calc(100% - 200px);
+    }
+
+}
 #button-top{
     text-decoration: none;
     vertical-align: middle;
@@ -244,7 +368,7 @@ li #in-evidenza::after {
 
 h1{
     color: white;
-    padding: 20px ;
+    padding:20px 0 10px 20px;
     font-size: 18px;
     font-weight: 900;
 }
@@ -291,6 +415,7 @@ h1{
 .description{
     color:gray;
     text-align: left;
+    padding: 0 0 20px 20px;
 }
 
 
@@ -302,7 +427,9 @@ h1{
 
 .text-under-photo h3{
     color: white;
-    font-size: 12px;
+    font-size: 15px;
+    text-align: justify;
+    text-align-last: center;
 }
 
 .text-under-photo h6{
@@ -416,12 +543,13 @@ footer #player{
     font-size: 26px; 
 }
 #special-button:hover{
-    font-size: 29px;
+    font-size: 32px;
 }
 .time-min, .time-max{
     width: 10%;
     font-size: 10px;
-    margin: 0 3px;
+    text-align: center;
+    margin: 0 8px;
 }
 
 .player-controll-bar{
@@ -470,8 +598,13 @@ footer #player{
 #footer-right li{
     display: flex;
     align-items: center;
-    margin-left: 8px;
-   
+    margin-left: 8px; 
+}
+#footer-right li i{
+    opacity: 0.7;
+}
+#footer-right li i:hover{
+    opacity: 1;
 }
 
 .volume-bar{
